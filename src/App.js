@@ -7,9 +7,6 @@ function App()
     return (
 
       <>
-      <h1>hello</h1>
-      <Home/>
-      
         <Router>
             <Switch>
                  <Route exact path="/home">
