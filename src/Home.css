@@ -1,5 +1,37 @@
 .home_img
 {
     float: right;
-    margin-top: -150px;
+    margin-top: -280px;
+   
+}
+
+.btn_1
+{
+    height: 40px;
+    width: 90px;
+    background-color: black;
+    color:white;
+    border: none;
+    margin-left: 130px;
+}
+.btn_2
+{
+    height: 40px;
+    width: 90px;
+    background-color: transparent;
+    margin-left: 10px;
+    
+}
+
+.home_input
+{
+    height: 50px;
+    width:600px;
+    border-color: tomato;
+   outline: none;
+   margin-left: 40px;
+}
+.home_main
+{
+   margin-top: 60px;
 }
