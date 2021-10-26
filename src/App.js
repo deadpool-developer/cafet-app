@@ -1,15 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router , Switch , Route } from "react-router-dom";
 import './App.css';
-/*import Home from "./components/Home/Home";*/
+import Home from "./Home";
 function App()
 {
     return (
 
       <>
       <h1>hello</h1>
-      </>
-        /*<Router>
+      <Home/>
+      
+        <Router>
             <Switch>
                  <Route exact path="/home">
                     <Home/>
@@ -17,7 +18,8 @@ function App()
                 
                 
             </Switch>
-        </Router>*/
+        </Router>
+        </>
     );
 }
 
