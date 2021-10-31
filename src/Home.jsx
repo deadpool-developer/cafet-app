@@ -58,6 +58,10 @@ function Home() {
       </button>
 
 </div>
+
+<div className="home_div2">
+  <h1 style={{marginLeft:"40px"}}> Trending this week</h1>
+</div>
     </>
   );
 }
