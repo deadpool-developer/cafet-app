@@ -31,4 +31,8 @@ function Login() {
     </>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f10319b4286c8ba7cb6a46293f3ffb60f453f16c
 export default Login;

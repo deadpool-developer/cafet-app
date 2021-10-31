@@ -13,6 +13,7 @@
     color:white;
     border: none;
     margin-left: 130px;
+    cursor: pointer;
 }
 .btn_2
 {
@@ -20,7 +21,7 @@
     width: 90px;
     background-color: transparent;
     margin-left: 10px;
-    
+    cursor: pointer;
 }
 
 .home_input
@@ -36,7 +37,25 @@
    margin-top: 60px;
 }
 
+<<<<<<< HEAD
 .home_div2
 {
   background-color: rgb(115, 241, 115);
+=======
+.find_food_btn{
+    border: transparent;
+    height: 7vh;
+    margin-left: -5.6vw;
+    color: white;
+    background-color: #FC8019;
+    cursor:pointer  ;
+}
+
+.typewriter{
+    font-family: sans-serif;
+  font-weight:800;
+  font-size:40px;   
+  margin-left: 5vw;
+  
+>>>>>>> f10319b4286c8ba7cb6a46293f3ffb60f453f16c
 }
