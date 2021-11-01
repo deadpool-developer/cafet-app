@@ -1,29 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router , Switch , Route } from "react-router-dom";
 import './App.css';
 import Home from "./Home";
-import Login from "./Login";
-import SignUp from './Sign_up';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import MainNavbar from './Navbar/navbar';
+import Login from './server/Login/Login';
+import SignUp from './SignUp';
+import Dashboard from "./server/Dashboard/Dashboard";
+import Preferences from "./server/Preferences/Preferences";
+import useToken from "./useToken";
+
+
 function App()
 {
+    const {token ,setToken}=useToken();
+    
+    if(!token)
+    {
+        return <Login setToken={setToken}/>
+    }
     return (
 
       <>
+      <h1>app</h1>
         <Router>
             <Switch>
                  <Route exact path="/home">
                     <Home/>
                 </Route>
-                <Route exact path = "/login">
-                    <Login/>
-                </Route>
-                <Route exact path= "/main">
-                    <MainNavbar/>
+                
+                
+                <Route exact path="/dashboard">
+                    <Dashboard/>
                 </Route>
                 
-                <Route exact path="/Sign_up">
+                <Route exact path="/preferences">
+                    <Preferences/>
+                </Route>
+                <Route exact path="/SignUp">
                     <SignUp/>
                 </Route>
                 
