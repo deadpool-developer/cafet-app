@@ -52,7 +52,7 @@ export default function Login({setToken}) {
           onChange={e => setPassword(e.target.value)}
           class="form-control"
           id="exampleFormControlInput1"
-          placeholder="name@example.com"
+          placeholder="password"
         />
       </div>
 
