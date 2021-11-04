@@ -2,11 +2,16 @@ import React from "react";
 import {Container, Nav, NavDropdown, Form, FormControl, Button,Navbar} from 'react-bootstrap';
 import "typeface-cinzel";
 import "typeface-bungee";
-import LoginIcon from '@mui/icons-material/Login';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import HelpIcon from '@mui/icons-material/Help';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import MainCarousel from "./Carousel/Carousel";
+import ProductPage from "./FoodCard/Product";
 
 
 function MainNavbar() {
     return(
+      <>
         <Navbar bg="light" variant="light" expand="xxl">
   <Container fluid>
     <Navbar.Brand href="#" style ={{fontFamily: "Bungee, cursive"}}>GreenChilli</Navbar.Brand>
@@ -17,9 +22,10 @@ function MainNavbar() {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link className="ms-3" style= {{fontFamily: "Cinzel, serif"}} href="/Sign_up"><LoginIcon/>Sign In</Nav.Link>
-        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif"}} href="#action2">Help</Nav.Link>
-        <NavDropdown className="ms-3"  style= {{fontFamily: "Cinzel, serif"}} title="About Us" id="navbarScrollingDropdown">
+        <Nav.Link className="ms-3" style= {{fontFamily: "Cinzel, serif"}} href="/Sign_up"><MenuBookIcon/>Menu</Nav.Link>
+        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif"}} href="#action2"><HelpIcon/>Help</Nav.Link>
+        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif"}} href="/Cart"><AddShoppingCartIcon/>Cart</Nav.Link>
+        <NavDropdown className="ms-3"  style= {{fontFamily: "Cinzel, serif"}}title="About Us" id="navbarScrollingDropdown">
           <NavDropdown.Item href="#action3">Policy</NavDropdown.Item>
           <NavDropdown.Item href="#action4">Team Members</NavDropdown.Item>
           <NavDropdown.Divider />
@@ -27,7 +33,7 @@ function MainNavbar() {
             KIET GROUPS OF INSTITUTIONS
           </NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif"}} href="/Cart">Cart</Nav.Link>
+        
         {/* <Nav.Link href="#" disabled>
           Link
         </Nav.Link> */}
@@ -44,6 +50,9 @@ function MainNavbar() {
     </Navbar.Collapse>
   </Container>
 </Navbar>
+<MainCarousel/>
+<ProductPage/>
+</>
     );
 }
 

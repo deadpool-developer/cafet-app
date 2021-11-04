@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
+import LoginIcon from '@mui/icons-material/Login';
 
 async function loginUser(credentials)
 {
@@ -30,7 +31,7 @@ export default function Login({setToken}) {
 
   return (
     <>
-      <h1>Login with your accoount</h1>
+      <h1>Login with your account<LoginIcon/></h1>
 
       <form onSubmit={handleSubmit}>
       <div>
