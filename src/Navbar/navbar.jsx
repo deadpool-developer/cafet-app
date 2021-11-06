@@ -6,8 +6,9 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import HelpIcon from '@mui/icons-material/Help';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import MainCarousel from "./Carousel/Carousel";
-import ProductPage from "./FoodCard/Product";
-
+import Products from "./Products";
+import {productData, productDataTwo} from "./Products/data";
+import Feature from "../Feature";
 
 function MainNavbar() {
     return(
@@ -22,7 +23,7 @@ function MainNavbar() {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link className="ms-3" style= {{fontFamily: "Cinzel, serif"}} href="/Sign_up"><MenuBookIcon/>Menu</Nav.Link>
+        <Nav.Link className="ms-3" style= {{fontFamily: "Cinzel, serif"}} href="/menu"><MenuBookIcon/>Menu</Nav.Link>
         <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif"}} href="#action2"><HelpIcon/>Help</Nav.Link>
         <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif"}} href="/Cart"><AddShoppingCartIcon/>Cart</Nav.Link>
         <NavDropdown className="ms-3"  style= {{fontFamily: "Cinzel, serif"}}title="About Us" id="navbarScrollingDropdown">
@@ -51,7 +52,9 @@ function MainNavbar() {
   </Container>
 </Navbar>
 <MainCarousel/>
-<ProductPage/>
+<Products heading= "Choose your favorite" data= {productData}/>
+<Feature/>
+<Products heading= "Sweet Treats For You" data= {productDataTwo}/>
 </>
     );
 }
