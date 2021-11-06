@@ -16,13 +16,9 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.24.0",
     "bootstrap": "^5.1.3",
-<<<<<<< HEAD
-    "mongoose": "^6.0.12",
-=======
     "framer-motion": "^5.2.0",
     "material-icons": "^1.10.0",
     "mdbreact": "^5.1.0",
->>>>>>> 106c31afcb1fb610d6bfc62d5f56ef476f3fabcf
     "node-modules": "^1.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.1",
