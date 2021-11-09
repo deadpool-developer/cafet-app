@@ -1,7 +1,8 @@
 import React from "react";
 import { useSpring, animated ,config} from 'react-spring'
 import {useState} from "react";
-import SVG from "./Star";
+import "typeface-bungee";
+import "./Home.css"
 
 
 function HomeMain() {
@@ -19,9 +20,8 @@ function HomeMain() {
   return (
       <>
       <div className="d-inline">
-  <animated.h1 style={props}>Welcome To GreenChilli Cafe</animated.h1>
+  <animated.h1 style={props} className="head">WELCOME &nbsp;&nbsp;TO</animated.h1>
  </div>
- <SVG/>
   </>
   )
 }

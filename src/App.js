@@ -10,6 +10,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { GlobalStyles } from '@mui/material';
 import Hero from './Hero';
 import MenuCarousel from './Navbar/Carousel/MenuCarousel';
+import Checkout from './Checkout/Checkout';
+
 
 
 
@@ -29,6 +31,10 @@ function App()
                  <Route exact path="/home">
                      <GlobalStyles/>
                     <Hero/>
+                </Route>
+
+                <Route exact path= "/checkout">
+                    <Checkout/>
                 </Route>
                 
                 

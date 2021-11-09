@@ -1,4 +1,5 @@
 import product1 from "../../images/product1.jpg";
+import product2 from "../../images/waffle.jpg";
 
 export const productData = [
     {
@@ -79,42 +80,42 @@ export const productData = [
 
 export const productDataTwo = [
     {
-        img:product1,
+        img:product2,
         alt: 'Pizza',
-        name: 'Supreme Pizza',
+        name: 'Waffle',
         desc: 'Marinara sauce, basil,italian sausage, roma tomatoes, olives and pesto',
         price: 'Rs 100',
         button: 'Add to Cart'
     },
     {
-        img:product1,
+        img:product2,
         alt: 'Pizza',
-        name: 'Supreme Pizza',
+        name: 'Waffle',
         desc: 'Marinara sauce, basil,italian sausage, roma tomatoes, olives and pesto',
         price: 'Rs 100',
         button: 'Add to Cart'
     },
     {
-        img:product1,
+        img:product2,
         alt: 'Pizza',
-        name: 'Supreme Pizza',
+        name: 'Waffle',
         desc: 'Marinara sauce, basil,italian sausage, roma tomatoes, olives and pesto',
         price: 'Rs 100',
         button: 'Add to Cart'
     },
     {
-        img:product1,
+        img:product2,
         alt: 'Pizza',
-        name: 'Supreme Pizza',
+        name: 'Waffle',
         desc: 'Marinara sauce, basil,italian sausage, roma tomatoes, olives and pesto',
         price: 'Rs 100',
         button: 'Add to Cart'
     },
     
     {
-        img:product1,
+        img:product2,
         alt: 'Pizza',
-        name: 'Supreme Pizza',
+        name: 'Waffle',
         desc: 'Marinara sauce, basil,italian sausage, roma tomatoes, olives and pesto',
         price: 'Rs 100',
         button: 'Add to Cart'

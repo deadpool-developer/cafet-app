@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import Navbar from "../Home/index";
 import SideBar from '../SideBar';
+import "typeface-courier-prime";
+
 import {
     HeroContainer,
     HeroContent, 
@@ -22,8 +24,9 @@ const Hero = () => {
             <SideBar isOpen = {isOpen} toggle= {toggle}/>
             <HeroContent>
                 <HeroItem>
-                    <HeroH1>We’ve got something</HeroH1>
-                    <HeroP>What can we get you?</HeroP>
+                    <HeroH1 style={{fontFamily: 'Courier Prime, monospace'}}>We’ve got something</HeroH1>
+                    <HeroP style={{color: "#FFFFFF",
+textShadow: "0 0 10px #FFFFFF"}}>What can we get you?</HeroP>
                     <HeroBtn>Place Order</HeroBtn>
                 </HeroItem>
             </HeroContent>

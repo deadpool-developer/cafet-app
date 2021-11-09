@@ -1,22 +1,17 @@
 import React from "react";
 import {Container, Nav, NavDropdown, Form, FormControl, Button,Navbar} from 'react-bootstrap';
 import "typeface-cinzel";
+import "typeface-bungee";
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import HelpIcon from '@mui/icons-material/Help';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import MainCarousel from "./Carousel/Carousel";
-import Products from "./Products";
-import {productData, productDataTwo} from "./Products/data";
-import Feature from "../Feature";
-import logo from "../images/logo.png";
 
-
-function MainNavbar() {
+function CheckoutNavbar() {
     return(
       <>
-        <Navbar style={{background:"#150f0f",position:"sticky", top:"0"}} expand="xxl">
+        <Navbar bg="light" variant="light" expand="xxl">
   <Container fluid>
-    <Navbar.Brand href="/home"><img src={logo}  height="70vh" alt=""/></Navbar.Brand>
+    <Navbar.Brand href="#" style ={{fontFamily: "Bungee, cursive"}}>GreenChilli</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -24,14 +19,10 @@ function MainNavbar() {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link className="ms-3" style= {{fontFamily: "Cinzel, serif",color:"white"}} href="/menu"><MenuBookIcon/>Menu</Nav.Link>
-        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} href="#action2"><HelpIcon/>Help</Nav.Link>
-        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} href="/checkout"><AddShoppingCartIcon/>
-        <span>0</span>
-        </Nav.Link>
-        <NavDropdown className="ms-3" title={
-        <span style= {{fontFamily: "Cinzel, serif",color:"white"}} className=" my-auto">About Us</span>
-    } id="navbarScrollingDropdown">
+        <Nav.Link className="ms-3" style= {{fontFamily: "Cinzel, serif"}} href="/menu"><MenuBookIcon/>Menu</Nav.Link>
+        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif"}} href="#action2"><HelpIcon/>Help</Nav.Link>
+        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif"}} href="/Cart"><AddShoppingCartIcon/>Cart</Nav.Link>
+        <NavDropdown className="ms-3"  style= {{fontFamily: "Cinzel, serif"}}title="About Us" id="navbarScrollingDropdown">
           <NavDropdown.Item href="#action3">Policy</NavDropdown.Item>
           <NavDropdown.Item href="#action4">Team Members</NavDropdown.Item>
           <NavDropdown.Divider />
@@ -56,14 +47,7 @@ function MainNavbar() {
     </Navbar.Collapse>
   </Container>
 </Navbar>
-<MainCarousel/>
-<Products heading= "Choose your favorite" data= {productData}/>
-<Feature/>
-<Products heading= "Sweet Treats For You" data= {productDataTwo}/>
-
-
 </>
-    );
-}
+    )}
 
-export default MainNavbar;
+export default CheckoutNavbar;

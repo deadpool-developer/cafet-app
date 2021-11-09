@@ -16,8 +16,24 @@ import "typeface-gruppo";
 import "typeface-electrolize";
 import "typeface-staatliches";
 import 'typeface-cabin-sketch';
+import { useStateValue } from '../../StateProvider';
 
-const Products = ({heading,data}) => {
+const Products = ({heading,data,price,img,rating}) => {
+    const [{basket}, dispatch] = useStateValue();
+    console.log("this is the basket",basket);
+    const addToBasket = () => {
+        //dispatch the item into the data layer
+    dispatch({
+        type: 'ADD_TO_BASKET',
+        item:{
+            
+            title:data.name,
+            image:data.img,
+            price:price,
+            rating:rating
+        }
+    })
+    }
     return (
         <div>
             <ProductsContainer>
@@ -31,7 +47,10 @@ const Products = ({heading,data}) => {
                                     <ProductTitle style={{fontFamily: 'Mate SC, serif'}}>{product.name}</ProductTitle>
                                     <ProductDesc style={{fontFamily: 'Gruppo, cursive'}}>{product.desc}</ProductDesc>
                                     <ProductPrice style={{fontFamily: 'Electrolize, sans-serif'}}>{product.price}</ProductPrice>
-                                    <ProductButton style={{fontFamily: 'Cabin Sketch, cursive'}}>{product.button}</ProductButton>
+                                    <ProductButton
+                                     style={{fontFamily: 'Cabin Sketch, cursive'}}
+                                     onClick={addToBasket}
+                                     >{product.button}</ProductButton>
                                 </ProductInfo>
                             </ProductCard>
                         )
