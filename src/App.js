@@ -1,12 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router , Switch , Route } from "react-router-dom";
 import './App.css';
-import HomeMain from "./Home/HomeMain";
 import Login from './Login/Login';
-import SignUp from './SignUp';
+
 
 import MainNavbar from './Navbar/navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { GlobalStyles } from '@mui/material';
+import Hero from './Hero';
+import MenuCarousel from './Navbar/Carousel/MenuCarousel';
+import Register from './Register/SignUp';
+
 
 
 function App()
@@ -18,17 +22,29 @@ function App()
         <Router>
             <Switch>
                  <Route exact path="/home">
-                    <HomeMain/>
+                     <GlobalStyles/>
+                    <Hero/>
                 </Route>
                 
-                
-                <Route exact path="/SignUp">
-                    <SignUp/>
+                <Route exact path="/register">
+                     <Register/>
+                    
                 </Route>
+                
+                <Route exact path="/login">
+                     <Login/>
+                    
+                </Route>
+                
+               
+                
+        
                 <Route exact path="/main">
                     <MainNavbar/>
                 </Route>
-                
+                <Route exact path="/menu">
+                    <MenuCarousel/>
+                </Route>
                 
             </Switch>
         </Router>
