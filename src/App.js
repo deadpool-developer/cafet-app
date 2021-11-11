@@ -10,6 +10,8 @@ import { GlobalStyles } from '@mui/material';
 import Hero from './Hero';
 import MenuCarousel from './Navbar/Carousel/MenuCarousel';
 import Register from './Register/SignUp';
+import Checkout from './Checkout/Checkout';
+
 
 
 
@@ -24,6 +26,10 @@ function App()
                  <Route exact path="/home">
                      <GlobalStyles/>
                     <Hero/>
+                </Route>
+
+                <Route exact path= "/checkout">
+                    <Checkout/>
                 </Route>
                 
                 <Route exact path="/register">
