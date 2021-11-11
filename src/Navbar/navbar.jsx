@@ -8,10 +8,13 @@ import MainCarousel from "./Carousel/Carousel";
 import Products from "./Products";
 import {productData, productDataTwo} from "./Products/data";
 import Feature from "../Feature";
+import JSONDATA from "../search/menu.json";
+import {useState} from 'react';
 import logo from "../images/logo.png";
 
 
 function MainNavbar() {
+  const [searchTerm, setSearchTerm] = useState('')
     return(
       <>
         <Navbar style={{background:"#150f0f",position:"sticky", top:"0"}} expand="xxl">
@@ -48,10 +51,25 @@ function MainNavbar() {
         <FormControl
           type="search"
           placeholder="Search For Dishes"
+          onChange={(event) =>{
+            setSearchTerm(event.target.value);
+          }}
           className="me-2"
           aria-label="Search"
         />
         <Button variant="outline-warning">Search</Button>
+        {JSONDATA.filter((val)=>{if (searchTerm ==="") {
+          return val
+          } else if (val.item.toLowerCase().includes(searchTerm.toLowerCase())){
+            return val
+          }
+        }).map((val, key) => {
+          return (
+           <div className="user" key={key}>
+             <p>{val.item}</p>
+           </div>
+          );
+          })}
       </Form>
     </Navbar.Collapse>
   </Container>
