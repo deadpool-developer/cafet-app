@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./login.css";
 
 const Login = () => {
+
+  const [email , setEmail] = useState('');
+  const [password , setPassword] = useState('');
   return (
     <>
       <div
@@ -33,6 +36,8 @@ const Login = () => {
                 id="email"
                 autoComplete="off"
                 placeholder="Your Email"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
                 className="signup_input"
               />
             </div>
