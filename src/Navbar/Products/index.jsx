@@ -18,28 +18,30 @@ import "typeface-staatliches";
 import 'typeface-cabin-sketch';
 import { useStateValue } from '../../StateProvider';
 
-const Products = ({heading,data,price,img,rating}) => {
+const Products = ({heading,data}) => {  
     const [{basket}, dispatch] = useStateValue();
-    console.log("this is the basket",basket);
-    const addToBasket = () => {
-        //dispatch the item into the data layer
-    dispatch({
-        type: 'ADD_TO_BASKET',
-        item:{
-            
-            title:data.name,
-            image:data.img,
-            price:price,
-            rating:rating
-        }
-    })
-    }
     return (
         <div>
             <ProductsContainer>
                 <ProductsHeading style={{fontFamily: 'Staatliches, cursive'}}>{heading}</ProductsHeading>
                 <ProductWrapper>
                     {data.map((product ,index) => {
+                        console.log("this is the basket",basket);
+                        const addToBasket = () => {
+                            //dispatch the item into the data layer
+                        dispatch({
+                            type: 'ADD_TO_BASKET',
+                            item:{
+                                
+                                title:product.name,
+                                image:product.img,
+                                price:product.price,
+                                desc: product.desc
+                            },
+                    
+                           
+                        })
+                    }
                         return(
                             <ProductCard key = {index}>
                                 <ProductImg src= {product.img} alt={product.alt}/>
@@ -53,8 +55,8 @@ const Products = ({heading,data,price,img,rating}) => {
                                      >{product.button}</ProductButton>
                                 </ProductInfo>
                             </ProductCard>
-                        )
-                    })}
+                        );
+                        })}
                 </ProductWrapper>
             </ProductsContainer>
         </div>

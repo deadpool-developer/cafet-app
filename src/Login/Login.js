@@ -71,7 +71,7 @@ const Login = () => {
           <div className="right">
             <figure>
               <img src="https://p.kindpng.com/picc/s/617-6173616_spring-roll-hd-png-download.png"
-                className="signup_img"
+                className="signup_img" alt=""
               />
             </figure>
 

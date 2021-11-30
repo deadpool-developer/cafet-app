@@ -11,15 +11,17 @@ import Feature from "../Feature";
 import JSONDATA from "../search/menu.json";
 import {useState} from 'react';
 import logo from "../images/logo.png";
+import { useStateValue } from "../StateProvider";
 
 
 function MainNavbar() {
   const [searchTerm, setSearchTerm] = useState('')
+  const [{basket},dispatch] = useStateValue();
     return(
       <>
         <Navbar style={{background:"#150f0f",position:"sticky", top:"0"}} expand="xxl">
   <Container fluid>
-    <Navbar.Brand href="/home"><img src={logo}  height="70vh" alt=""/></Navbar.Brand>
+    <Navbar.Brand to="/home"><img src={logo}  height="70vh" alt=""/></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -27,10 +29,10 @@ function MainNavbar() {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link className="ms-3" style= {{fontFamily: "Cinzel, serif",color:"white"}} href="/menu"><MenuBookIcon/>Menu</Nav.Link>
-        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} href="#action2"><HelpIcon/>Help</Nav.Link>
-        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} href="/checkout"><AddShoppingCartIcon/>
-        <span>0</span>
+        <Nav.Link className="ms-3" style= {{fontFamily: "Cinzel, serif",color:"white"}} to=""><MenuBookIcon/>Menu</Nav.Link>
+        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} to="#action2"><HelpIcon/>Help</Nav.Link>
+        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} to="/checkout"><AddShoppingCartIcon/>
+        <span>{basket?.length}</span>
         </Nav.Link>
         <NavDropdown className="ms-3" title={
         <span style= {{fontFamily: "Cinzel, serif",color:"white"}} className=" my-auto">About Us</span>
@@ -58,14 +60,23 @@ function MainNavbar() {
           aria-label="Search"
         />
         <Button variant="outline-warning">Search</Button>
-        {JSONDATA.filter((val)=>{if (searchTerm ==="") {
+        {JSONDATA.filter((val)=> {if (searchTerm ==="") {
           return val
           } else if (val.item.toLowerCase().includes(searchTerm.toLowerCase())){
             return val
           }
         }).map((val, key) => {
           return (
-           <div className="user" key={key}>
+           <div 
+           style={{position:"absolute", display:"inline-block",top: "70%",
+           left: "84%",
+           right: "0",
+           borderBottom: "none",
+           borderTop: "none",
+           zIndex: "99",
+           padding: "10px"
+          }}
+           key={key}>
              <p>{val.item}</p>
            </div>
           );
