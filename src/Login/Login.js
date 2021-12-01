@@ -1,11 +1,45 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink ,useHistory} from "react-router-dom";
 import "./login.css";
 
 const Login = () => {
 
+  const history = useHistory();
   const [email , setEmail] = useState('');
   const [password , setPassword] = useState('');
+
+  const LoginUser=async(e)=>
+  {
+    e.preventDefault();
+
+   const res= await fetch("/signin",{
+
+    method:"POST",
+    headers:{
+     
+      "Content-Type:":"application/json"
+    },
+    body:JSON.stringify({
+
+      email,password
+    })
+   
+   });
+
+   const data = await res.json();
+
+   if(res.status === 400 || !data)
+   {
+     window.alert("Invalid Credentials");
+   }
+
+   else
+   {
+     window.alert("Login successful");
+     history.push("/main")
+   }
+   
+  }
   return (
     <>
       <div
@@ -22,7 +56,7 @@ const Login = () => {
         <div className="container mt-5 left">
           <h3 className="signup_heading">SIGN UP</h3>
 
-          <form className="register-form" id="register-form">
+          <form  method="POST" className="register-form" id="register-form">
            
 
             <div className="form-group">
@@ -55,6 +89,8 @@ const Login = () => {
                 id="password"
                 autoComplete="off"
                 placeholder="Your Password"
+                value={password}
+                onChange={(e)=>setPassword(e.target.value)}
                 className="signup_input"
               />
             </div>
@@ -63,7 +99,13 @@ const Login = () => {
 
       
             <div className="form-group form-button">
-              <input type="submit" name="signup" id="signup" className="btn btn-warning signup_input submit" value="Register"/>
+              <input type="submit" name="signup" id="signup" className="btn btn-warning signup_input submit" 
+              value="Log In"
+                onClick={LoginUser}
+              />
+               
+           
+           
             </div>
 
 
