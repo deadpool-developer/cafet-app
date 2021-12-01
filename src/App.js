@@ -11,6 +11,7 @@ import Hero from './Hero';
 import MenuCarousel from './Navbar/Carousel/MenuCarousel';
 import Register from './Register/SignUp';
 import Checkout from './Checkout/Checkout';
+import NavbarCheckout from "./Checkout/NavbarCheckout"
 
 
 
@@ -28,9 +29,6 @@ function App()
                     <Hero/>
                 </Route>
 
-                <Route exact path= "/checkout">
-                    <Checkout/>
-                </Route>
                 
                 <Route exact path="/register">
                      <Register/>
@@ -50,6 +48,10 @@ function App()
                 </Route>
                 <Route exact path="/menu">
                     <MenuCarousel/>
+                </Route>
+
+                <Route exact path= "/checkout">
+                    <Checkout/>
                 </Route>
                 
             </Switch>
