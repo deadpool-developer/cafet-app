@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Nav, NavDropdown, Form, FormControl, Button,Navbar} from 'react-bootstrap';
+import {Container, Nav, NavDropdown,Navbar} from 'react-bootstrap';
 import "typeface-cinzel";
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import HelpIcon from '@mui/icons-material/Help';
@@ -8,22 +8,22 @@ import MainCarousel from "./Carousel/Carousel";
 import Products from "./Products";
 import {productData, productDataTwo} from "./Products/data";
 import Feature from "../Feature";
-import JSONDATA from "../search/menu.json";
-import {useState} from 'react';
+// import SearchBar from "../search/SearchBar";
+// import MenuData from "../search/menu.json";
 import logo from "../images/logo.png";
 import { useStateValue } from "../StateProvider";
 import {Link} from "react-router-dom"
 
 
 
-function MainNavbar() {
-  const [searchTerm, setSearchTerm] = useState('')
+function MainNavbar() { 
+
   const [{basket},dispatch] = useStateValue();
     return(
       <>
         <Navbar style={{background:"#150f0f",position:"sticky", top:"0"}} expand="xxl">
   <Container fluid>
-    <Navbar.Brand to="/home"><img src={logo}  height="70vh" alt=""/></Navbar.Brand>
+    <Navbar.Brand href="/"><img src={logo}  height="70vh" alt=""/></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -41,49 +41,18 @@ function MainNavbar() {
     } id="navbarScrollingDropdown">
           <NavDropdown.Item href="#action3">Policy</NavDropdown.Item>
           <NavDropdown.Item href="#action4">Team Members</NavDropdown.Item>
+
           <NavDropdown.Divider />
           <NavDropdown.Item href="#action5">
             KIET GROUPS OF INSTITUTIONS
           </NavDropdown.Item>
         </NavDropdown>
+        {/* <div><SearchBar placeholder="Enter your fav dish.." data={MenuData}/></div> */}
         
         {/* <Nav.Link href="#" disabled>
           Link
         </Nav.Link> */}
       </Nav>
-      <Form className="d-flex">
-        <FormControl
-          type="search"
-          placeholder="Search For Dishes"
-          onChange={(event) =>{
-            setSearchTerm(event.target.value);
-          }}
-          className="me-2"
-          aria-label="Search"
-        />
-        <Button variant="outline-warning">Search</Button>
-        {JSONDATA.filter((val)=> {if (searchTerm ==="") {
-          return val
-          } else if (val.item.toLowerCase().includes(searchTerm.toLowerCase())){
-            return val
-          }
-        }).map((val, key) => {
-          return (
-           <div 
-           style={{position:"absolute", display:"inline-block",top: "70%",
-           left: "84%",
-           right: "0",
-           borderBottom: "none",
-           borderTop: "none",
-           zIndex: "99",
-           padding: "10px"
-          }}
-           key={key}>
-             <p>{val.item}</p>
-           </div>
-          );
-          })}
-      </Form>
     </Navbar.Collapse>
   </Container>
 </Navbar>
