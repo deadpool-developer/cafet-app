@@ -1,17 +1,16 @@
 import React from "react";
-import {Container, Nav, NavDropdown, Form, FormControl, Button,Navbar} from 'react-bootstrap';
+import {Container, Nav, NavDropdown,Navbar} from 'react-bootstrap';
 import "typeface-cinzel";
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import HelpIcon from '@mui/icons-material/Help';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import {useState} from 'react';
+
 import logo from "../images/logo.png";
 import { useStateValue } from "../StateProvider";
 
 
 function NavbarCheckout() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [{basket},dispatch] = useStateValue();
+  const [{basket}] = useStateValue();
     return(
       <>
         <Navbar style={{background:"#150f0f",position:"sticky", top:"0"}} expand="xxl">
