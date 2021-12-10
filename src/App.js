@@ -24,7 +24,7 @@ function App()
       <>
         <Router>
             <Switch>
-                 <Route exact path="/home">
+                 <Route exact path="/">
                      <GlobalStyles/>
                     <Hero/>
                 </Route>

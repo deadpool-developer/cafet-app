@@ -12,6 +12,8 @@ import JSONDATA from "../search/menu.json";
 import {useState} from 'react';
 import logo from "../images/logo.png";
 import { useStateValue } from "../StateProvider";
+import {Link} from "react-router-dom"
+
 
 
 function MainNavbar() {
@@ -29,9 +31,9 @@ function MainNavbar() {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link className="ms-3" style= {{fontFamily: "Cinzel, serif",color:"white"}} to=""><MenuBookIcon/>Menu</Nav.Link>
-        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} to="#action2"><HelpIcon/>Help</Nav.Link>
-        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} to="/checkout"><AddShoppingCartIcon/>
+        <Nav.Link className="ms-3" style= {{fontFamily: "Cinzel, serif",color:"white"}} as={Link} to="/menu"><MenuBookIcon/>Menu</Nav.Link>
+        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}}><HelpIcon/>Help</Nav.Link>
+        <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} as={Link} to="/checkout"><AddShoppingCartIcon/>
         <span>{basket?.length}</span>
         </Nav.Link>
         <NavDropdown className="ms-3" title={
