@@ -42,15 +42,16 @@ const Login = () => {
   }
   return (
     <>
+     <div className="div2"></div>
       <div
         class="card signup_outer"
         style={{
           width: "50rem",
           height: "30rem",
           margin: "auto",
-          marginTop: "60px",
+          marginTop: "-650px",
           padding: "5px",
-          background:"",
+          background:"white",
         }}
       >
         <div className="container mt-5 left">
@@ -73,6 +74,7 @@ const Login = () => {
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}
                 className="signup_input"
+                
               />
             </div>
 
@@ -118,11 +120,11 @@ const Login = () => {
           <div className="right">
             <figure>
               <img src="https://p.kindpng.com/picc/s/617-6173616_spring-roll-hd-png-download.png"
-                className="signup_img" alt=""
+                className="signup_img" style={{marginTop:"100px"}}
               />
             </figure>
 
-            <NavLink to="/login" style={{marginLeft:"35px",fontSize:"16px",fontWeight:"bold"}}>Already Registered ?</NavLink>
+            <NavLink to="/register" style={{marginLeft:"35px",fontSize:"16px",fontWeight:"bold"}}>Not a registered user sign up?</NavLink>
           </div>
        
         

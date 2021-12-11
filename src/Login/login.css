@@ -1,5 +1,9 @@
-*
+.div2
 {
     
-    background-image: url("");
+    background-image: url("https://cdn.wallpapersafari.com/26/92/0KH5pV.jpg");
+    
+    height:100vh;
+    background-position:center;
+    background-size:cover;
 }

@@ -48,15 +48,16 @@ const Register = () => {
   }
   return (
     <>
+     <div style={{background:"" ,height:"900px" , marginTop:"-160px" }} className="div1"></div>
       <div
         class="card signup_outer"
         style={{
           width: "50rem",
           height: "30rem",
           margin: "auto",
-          marginTop: "60px",
+          marginTop: "-600px",
           padding: "5px",
-          
+         
         }}
       >
         <div className="container mt-5 left">
