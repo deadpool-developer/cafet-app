@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ImgBg from "../../src/images/Home.jpg";
+import ImgBg from "../../src/images/h1.jpg";
 
 export const HeroContainer = styled.div`
     background:linear-gradient(to right, rgba(0,0,0,0.7),

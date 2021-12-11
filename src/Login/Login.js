@@ -17,7 +17,7 @@ const Login = () => {
     method:"POST",
     headers:{
      
-      "Content-Type:":"application/json"
+      "Content-Type":"application/json"
     },
     body:JSON.stringify({
 
@@ -50,11 +50,11 @@ const Login = () => {
           margin: "auto",
           marginTop: "60px",
           padding: "5px",
-          
+          background:"",
         }}
       >
         <div className="container mt-5 left">
-          <h3 className="signup_heading">SIGN UP</h3>
+          <h3 className="signup_heading">Sign In </h3>
 
           <form  method="POST" className="register-form" id="register-form">
            
@@ -122,7 +122,7 @@ const Login = () => {
               />
             </figure>
 
-            <NavLink to="/signin" style={{marginLeft:"35px",fontSize:"16px",fontWeight:"bold"}}>Already Registered ?</NavLink>
+            <NavLink to="/login" style={{marginLeft:"35px",fontSize:"16px",fontWeight:"bold"}}>Already Registered ?</NavLink>
           </div>
        
         

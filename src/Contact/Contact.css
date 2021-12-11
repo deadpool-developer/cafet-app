@@ -1,0 +1,29 @@
+.contact_heading {
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+  }
+  
+  .main_div {
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    width: 600px;
+    height: 85vh;
+    transform: perspective(800px);
+  
+    transition: transform 1s ease 0s;
+    border-radius: 4px;
+    box-shadow: 3px 6px 8px -1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 6px 8px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 6px 8px -1px rgba(0,0,0,0.75);
+  }
+  
+  .contact_content {
+    padding: 10px;
+  }
+  
+  .contact_para {
+    padding: 10px;
+  }

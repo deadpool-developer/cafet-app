@@ -12,6 +12,8 @@ import MenuCarousel from './Navbar/Carousel/MenuCarousel';
 import Register from './Register/SignUp';
 import Checkout from './Checkout/Checkout';
 import NavbarCheckout from "./Checkout/NavbarCheckout"
+import Contact from './Contact/Contact';
+import Profile from './Profile/Profile';
 
 
 
@@ -39,6 +41,18 @@ function App()
                      <Login/>
                     
                 </Route>
+
+                <Route exact path="/contact">
+                     <Contact/>
+                    
+                </Route>
+                  
+                <Route exact path="/profile">
+                     <Profile/>
+                    
+                </Route>
+                
+
                 
                
                 

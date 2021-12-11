@@ -12,6 +12,7 @@ import JSONDATA from "../search/menu.json";
 import {useState} from 'react';
 import logo from "../images/logo.png";
 import { useStateValue } from "../StateProvider";
+import { NavLink } from "react-router-dom";
 
 
 function MainNavbar() {
@@ -31,6 +32,7 @@ function MainNavbar() {
       >
         <Nav.Link className="ms-3" style= {{fontFamily: "Cinzel, serif",color:"white"}} to=""><MenuBookIcon/>Menu</Nav.Link>
         <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} to="#action2"><HelpIcon/>Help</Nav.Link>
+        <NavLink className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} to="/profile"><HelpIcon/>Profile</NavLink>
         <Nav.Link className="ms-3"  style= {{fontFamily: "Cinzel, serif",color:"white"}} to="/checkout"><AddShoppingCartIcon/>
         <span>{basket?.length}</span>
         </Nav.Link>
