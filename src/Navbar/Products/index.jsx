@@ -32,7 +32,7 @@ const Products = ({heading,data}) => {
                         dispatch({
                             type: 'ADD_TO_BASKET',
                             item:{
-                                
+                                id:product.id,
                                 title:product.name,
                                 image:product.img,
                                 price:product.price,

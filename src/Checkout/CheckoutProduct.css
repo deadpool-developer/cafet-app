@@ -1,0 +1,42 @@
+.checkoutProduct_image{
+    height: 300px;
+    min-width: 300px;
+    max-width: 100%;
+    box-shadow: 8px 8px #fdc500;
+    margin-bottom: 1rem;
+}
+
+.checkoutProduct__title{
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: 'Mate SC, serif'
+}
+.checkoutProduct__price{
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+.checkoutProduct{
+    line-height:2;
+    width: 300px;
+}
+
+.checkoutProduct__info{
+    margin-bottom: 1rem;
+}
+.remove__btn{
+    font-size: 1rem;
+    padding: 1rem 4rem;
+    border: none;
+    border-radius:120px;
+    background: #e31837;
+    color: #fff;
+    transition: 0.2 ease-out;
+    margin-bottom: 2rem;
+}
+
+.remove__btn:hover {
+        background: #ffc500;
+        transition: 0.2s ease-out;
+        cursor: pointer;
+        color: #000
+}

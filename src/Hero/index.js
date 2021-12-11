@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Navbar from "../Home/index";
 import SideBar from '../SideBar';
 import "typeface-courier-prime";
-
+import { Link } from 'react-router-dom';
 import {
     HeroContainer,
     HeroContent, 
@@ -27,7 +27,9 @@ const Hero = () => {
                     <HeroH1 style={{fontFamily: 'Courier Prime, monospace'}}>We’ve got something</HeroH1>
                     <HeroP style={{color: "#FFFFFF",
 textShadow: "0 0 10px #FFFFFF"}}>What can we get you?</HeroP>
+                    <Link to="/main">
                     <HeroBtn>Place Order</HeroBtn>
+                    </Link>
                 </HeroItem>
             </HeroContent>
         </HeroContainer>
